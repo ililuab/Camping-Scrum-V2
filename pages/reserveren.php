@@ -31,10 +31,5 @@
     </div>
   </div>
 
-
-  <div class="database-results-container">
-      <div class="leftbar"></div>
-      <div class="main-content"></div>
-  </div>
 </body>
 </html>
