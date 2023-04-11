@@ -1,9 +1,3 @@
-// resources/scss/app.scss
-@import "~bootstrap/scss/bootstrap";
-
-//Kleuren pallet
-@import "~bootstrap/scss/bootstrap";
-
 $dim-gray: #6c756bff;
 
 @keyframes bluranimation {
@@ -28,7 +22,7 @@ $dim-gray: #6c756bff;
  }
 
  .main-background-home {
-    background-image: url(/public/media/homebackground.jpg);
+    background-image: url(../media/homebackground.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -38,7 +32,7 @@ $dim-gray: #6c756bff;
  }
 
  .reserveer {
-    background-image: url(/public/media/reservationbackground.jpg);
+    background-image: url(../media/reservationbackground.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -163,6 +157,6 @@ header {
     }
     .main-content {
         height: 100px;
-        background-color: green;
+        background-color: red;
     }
 }

@@ -11,8 +11,9 @@
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
-<?php include "header.php";  ?>
+<?php include "../inc/header.php";  ?>
   <body>
       <div class="container pt-5 pb-5">
         <div class="row">
