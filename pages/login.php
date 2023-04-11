@@ -13,6 +13,9 @@
 <?php include "../inc/header.php";  ?>
 <body>
 
+    <section class="login-background">
+    
+    </section>
     
 </body>
 </html>
