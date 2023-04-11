@@ -12,8 +12,8 @@ if (isset($_POST["submit-signup"])) {
     $phoneNumber = $_POST["phone_number"];
 
     if (empty($email) || empty($naam) || empty($wachtwoord) || empty($phoneNumber)) {
-        $error = "You need to fill all forms!";
-        echo "You need to fill all forms!";
+        $error = "Je moet alle velden invullen!";
+        echo "Je moet alle velden invullen!";
         redirect("../login.php");
     } else {
         $query = "SELECT * FROM account WHERE email = :email";
