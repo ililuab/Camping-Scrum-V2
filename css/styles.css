@@ -1,0 +1,162 @@
+@keyframes bluranimation {
+  from {
+    -webkit-backdrop-filter: blur(0px);
+            backdrop-filter: blur(0px);
+  }
+  to {
+    -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
+  }
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  font-weight: bold;
+  list-style-type: none;
+  font-family: "Titillium Web", sans-serif;
+}
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.main-background-home {
+  background-image: url(../media/homebackground.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  animation: bluranimation 4s;
+  transition: 0.25s;
+}
+
+.reserveer {
+  background-image: url(../media/reservationbackground.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.reserveer-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 55rem;
+  height: 110px;
+  background-color: #f5f5f5;
+}
+.reserveer-form button {
+  transition: 0.25s;
+}
+.reserveer-form svg {
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+.reserveer-form input {
+  border-radius: 5px;
+  border: 1px solid black;
+  height: 30px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.filler-row {
+  margin-top: 200px;
+}
+
+svg {
+  margin-top: 5px;
+  margin-right: 7px;
+}
+
+header .container-main {
+  width: 100%;
+  height: 100px;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: space-between;
+}
+header .logo {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: -21px;
+}
+header .logo-container {
+  width: 10%;
+  height: 100%;
+}
+header .nav-container ul {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0;
+}
+header .nav-container li {
+  text-decoration: none;
+  margin-left: 50px;
+}
+header .nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 40px;
+}
+header a {
+  color: #6c756b;
+  transition: 0.25s;
+}
+header a:hover {
+  color: rgb(145, 175, 144);
+  transition: 0.25s;
+}
+
+.content-container .home-page-hero {
+  height: 150px;
+}
+.content-container .home-page-hero h1 {
+  font-size: 5rem;
+  margin-top: 20px;
+}
+.content-container .reserveer-form {
+  height: 35rem;
+  width: 400px;
+  background-color: white;
+  margin-right: auto;
+}
+.content-container h1 {
+  margin-left: 5rem;
+}
+.content-container button {
+  margin-left: 5rem;
+  transition: 0.25s;
+}
+
+.inner-container {
+  background-color: #f5f5f5;
+}
+
+.database-results-container {
+  width: 100vw;
+  height: auto;
+}
+.database-results-container .leftbar {
+  height: 1000px;
+  background-color: red;
+}
+.database-results-container .main-content {
+  height: 100px;
+  background-color: red;
+}/*# sourceMappingURL=styles.css.map */
