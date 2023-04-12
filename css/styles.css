@@ -20,7 +20,7 @@
 }
 
 html, body {
-  width: 100vw;
+  width: auto;
   height: 100vh;
 }
 
@@ -31,6 +31,8 @@ html, body {
   background-position: center;
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
+  animation: bluranimation 4s;
+  transition: 0.25s;
 }
 
 .reserveer {
@@ -147,14 +149,20 @@ header a:hover {
 }
 
 .database-results-container {
-  width: 100vw;
-  height: auto;
+  display: flex;
 }
 .database-results-container .leftbar {
-  height: 1000px;
-  background-color: red;
+  height: 500px;
+  width: 25%;
+  background-color: green;
 }
 .database-results-container .main-content {
-  height: 100px;
-  background-color: red;
+  width: 75%;
+  height: 500px;
+}
+.database-results-container .main-content .btn {
+  transition: 0.25s;
+}
+.database-results-container .main-content .card {
+  margin-top: 10px;
 }/*# sourceMappingURL=styles.css.map */

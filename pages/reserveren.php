@@ -32,5 +32,36 @@
     </div>
   </div>
 
+
+  <div class="database-results-container">
+      <div class="leftbar"></div>
+
+      <div class="container-fluid main-content">
+        <div class="row">
+        <?php 
+        include_once('../includes/connect.php');
+
+        $stmt = $conn->prepare("SELECT * FROM camping_place");
+        $stmt->execute();
+        $camping_place = $stmt->fetchAll();
+
+        foreach ($camping_place as $camping_place) {?>
+          <div class="col-xxl-3 col-3">
+          <div class="card">
+            <img class="card-img-top" src="<?php echo $camping_place['image']; ?>" alt="">
+            <div class="card-body">
+              <h5 class="card-title"><?php echo $camping_place['name']; ?></h5>
+              <p class="card-text"><?php echo $camping_place['cost_per_day']; ?>,-</p>
+              <p class="card-text"><?php echo $camping_place['description']; ?></p>
+              <a href="#" class="btn btn-outline-success">Reserveer voor de sfeer</a>
+            </div>
+        </div>
+        </div>
+            <?php }
+        ?>
+        </div>
+      </div>
+  </div>
+  
 </body>
 </html>

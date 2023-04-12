@@ -16,7 +16,7 @@ if (isset($_POST["submit"])) {
 
     var_dump($_POST);
     if (empty($email) || empty($wachtwoord)) {
-        $error = "You need to fill all forms!";
+        $error = "Je moet alle velden invullen!";
         redirect("../login.php");
     } else {
         $query = "SELECT * FROM account WHERE email = :email AND password = :password";
