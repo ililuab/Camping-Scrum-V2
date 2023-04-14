@@ -19,9 +19,10 @@
         <div class="row filler-row">
           <div class="home-page-hero col-12">
             <h1 class="text-white fw-bold">Camping Scrum BV</h1>
+            <p class="text-white" >Reserveer voor de sfeer!</p>
           </div>
         </div>
-        <div class="row">
+        <div class="r ow">
           <div class="col-12">
             <a href="/pages/reserveren"><button type="button" class="btn btn-lg btn-outline-light">Reserveer nu</button></a>
           </div>

@@ -54,7 +54,9 @@ html, body {
   align-items: center;
   width: 55rem;
   height: 110px;
-  background-color: #f5f5f5;
+  background-color: rgb(74, 91, 73);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 .reserveer-form button {
   transition: 0.25s;
@@ -64,9 +66,25 @@ html, body {
   margin-bottom: 4px;
 }
 .reserveer-form input {
-  border-radius: 5px;
-  border: 1px solid black;
+  color: white;
+  border-bottom: 2px solid white;
+  border-top: none;
+  border-left: none;
+  border-right: none;
   height: 30px;
+  background-color: transparent;
+  text-decoration: none;
+}
+.reserveer-form input::-moz-placeholder {
+  color: white;
+  opacity: 0.5;
+}
+.reserveer-form input::placeholder {
+  color: white;
+  opacity: 0.5;
+}
+.reserveer-form input:focus {
+  outline: none;
 }
 
 a {
@@ -115,7 +133,7 @@ header .nav-container {
   margin-right: 40px;
 }
 header a {
-  color: #6c756b;
+  color: rgb(111, 123, 109);
   transition: 0.25s;
 }
 header a:hover {
@@ -130,6 +148,10 @@ header a:hover {
   font-size: 5rem;
   margin-top: 20px;
 }
+.content-container .home-page-hero p {
+  margin-left: 5rem;
+  margin-bottom: 3rem;
+}
 .content-container .reserveer-form {
   height: 35rem;
   width: 400px;
@@ -139,7 +161,8 @@ header a:hover {
 .content-container h1 {
   margin-left: 5rem;
 }
-.content-container button {
+
+button {
   margin-left: 5rem;
   transition: 0.25s;
 }
@@ -152,9 +175,12 @@ header a:hover {
   display: flex;
 }
 .database-results-container .leftbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 500px;
   width: 25%;
-  background-color: green;
+  background-color: #F5F5F5;
 }
 .database-results-container .main-content {
   width: 75%;
