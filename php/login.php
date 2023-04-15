@@ -17,7 +17,7 @@ if (isset($_POST["submit"])) {
     var_dump($_POST);
     if (empty($email) || empty($wachtwoord)) {
         $error = "You need to fill all forms!";
-        redirect("../login.php");
+        redirect("../pages/login.php");
     } else {
         $query = "SELECT * FROM account WHERE email = :email AND password = :password";
         $stmt = $conn->prepare($query);
@@ -30,18 +30,21 @@ if (isset($_POST["submit"])) {
             $stmt->bindParam(":email", $email);
             $stmt->execute();
             $row = $stmt->fetch();
-            if($row['account_role'] == 0) {
-                redirect("../admin/adminhome.php");
+            if($row['account_role'] == 1) {
+                redirect("../admin/dashboard.php");
             } else {
-                redirect("../userprofiles.php");
+                redirect("../pages/account.php");
             }
         } else {
-            redirect("../login.php");
+            redirect("../pages/login.php");
         }
     }
 }
 
 function printError(): string {
     global $error;
-    return $error;
+    if ($error != null)
+        return $error;
+    else 
+        return "";
 }
