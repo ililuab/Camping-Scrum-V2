@@ -10,7 +10,7 @@ if (isset($_POST["submit-signup"])) {
     $email = $_POST["email"];
     $wachtwoord = $_POST["wachtwoord"];
     $phoneNumber = $_POST["phone_number"];
-
+    
     if (empty($email) || empty($fullName) || empty($wachtwoord) || empty($phoneNumber)) {
         $error = "You need to fill all forms!";
         echo "You need to fill all forms!";
