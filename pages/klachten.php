@@ -1,7 +1,6 @@
 <?php
 include "../includes/connect.php";
-session_start();
-
+include "../includes/sessions.php";
 // Controleren of er een melding is ingesteld
 if (isset($_SESSION['complaint_success'])) {
     // Melding weergeven
@@ -31,20 +30,18 @@ if (isset($_SESSION['complaint_success'])) {
 
 <body>
     <form method="post" action="klachten-update.php">
-        <label for="account_id">Account ID:</label>
-        <input type="text" name="account_id" id="account_id" required><br><br>
 
-        <label for="priority">Priority:</label>
+        <label for="priority">Prioriteit:</label>
         <select name="priority" id="priority" required>
             <option value="1">Laag</option>
             <option value="2">Gemiddeld</option>
             <option value="3">Hoog</option>
         </select><br><br>
 
-        <label for="complaint">Complaint:</label>
+        <label for="complaint">Klacht:</label>
         <textarea name="complaint" id="complaint" required></textarea><br><br>
 
-        <label for="complaint_role">Complaint Role:</label>
+        <label for="complaint_role">Bedoelt voor:</label>
         <select name="complaint_role" id="complaint_role" required>
             <option value="1">Onderhoudsmedewerker</option>
             <option value="2">Schoonmaker</option>

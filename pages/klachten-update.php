@@ -1,9 +1,13 @@
 <?php
 include "../includes/connect.php";
 session_start();
+if (!isset($_POST['submit'])) {
+    header('Location: klachten.php');
+    exit();
+}
 
 // Gegevens uit het formulier ophalen
-$account_id = $_POST['account_id'];
+$account_id = $_SESSION['user_id'];
 $priority = $_POST['priority'];
 $complaint = $_POST['complaint'];
 $complaint_role = $_POST['complaint_role'];
@@ -15,7 +19,7 @@ $sql = "INSERT INTO complaints (account_id, priority, complaint, complaint_role)
 $stmt = $conn->prepare($sql);
 
 // Binden van de parameters aan de query
-$stmt->bindParam(':account_id', $account_id);
+$stmt->bindParam(':account_id', $_SESSION['user_id']);
 $stmt->bindParam(':priority', $priority);
 $stmt->bindParam(':complaint', $complaint);
 $stmt->bindParam(':complaint_role', $complaint_role);

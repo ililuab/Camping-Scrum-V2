@@ -24,12 +24,17 @@ if (isset($_POST["submit"])) {
         $stmt->bindParam(":email", $email);
         $stmt->bindParam(":password", $wachtwoord);
         $stmt->execute();
+        
         if ($stmt->rowCount() == 1) {
+            $row = $stmt->fetch();
+            $_SESSION['user_id'] = $row['id'];
+            
             $query = "SELECT account_role FROM account WHERE email = :email";
             $stmt = $conn->prepare($query);
             $stmt->bindParam(":email", $email);
             $stmt->execute();
             $row = $stmt->fetch();
+            
             if($row['account_role'] == 1) {
                 redirect("../admin/dashboard.php");
             } else {
@@ -37,7 +42,7 @@ if (isset($_POST["submit"])) {
             }
         } else {
             redirect("../pages/login.php");
-        }
+        }        
     }
 }
 

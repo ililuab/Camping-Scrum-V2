@@ -45,9 +45,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         // Send the email
         $mail->send();
-        echo 'Email has been sent';
+        echo 'Email Verzonden.';
     } catch (Exception $e) {
-        echo 'Email could not be sent. Error: ', $mail->ErrorInfo;
+        echo 'Email niet verzonden Error: ', $mail->ErrorInfo;
     }
 }
 ?>

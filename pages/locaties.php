@@ -1,6 +1,12 @@
 <?php
 include "../includes/connect.php";
-session_start();
+include "../includes/sessions.php";
+
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Verwerk het formulier voor het bijwerken van gegevens
+    // Hier kun je de code toevoegen om de gegevens in de database bij te werken
+}
 
 ?>
 
@@ -22,6 +28,7 @@ session_start();
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/styles.css">
 </head>
+
 
 <body>
     <div class="container">
@@ -77,55 +84,73 @@ session_start();
 
                 </form>
             </div>
-            <?php ?>
-            <div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <?php
-            // Query om gegevens op te halen uit de database
-            $sql = "SELECT * FROM camping_place";
-            $result = $conn->query($sql);
-        
-            // Controleren of er resultaten zijn
-            if ($result->rowCount() > 0) {
-                // Beginnen met het maken van de HTML-tabel
-                ?>
-                <table class="table table-striped table-bordered">
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Kosten P.D</th>
-                            <th>In Gebruik</th>
-                            <th>Schoongemaakt</th>
-                            <th>Beschrijving</th>
-                            <th>Plaatje</th>
-                            <th>Naam</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php
-                        // Loop door de resultaten en voeg elke rij toe aan de HTML-tabel
-                        while($row = $result->fetch(PDO::FETCH_ASSOC)) {
-                            ?>
-                            <tr>
-                                <td><?php echo $row["id"]; ?></td>
-                                <td><?php echo $row["cost_per_day"]; ?></td>
-                                <td><?php echo ($row["in_use"] == 1) ? "Ja" : "Nee"; ?></td>
-                                <td><?php echo ($row["cleaned"] == 1) ? "Ja" : "Nee"; ?></td>
-                                <td><?php echo $row["description"]; ?></td>
-                                <td style="max-width: 150px;"><img class="img-fluid" src="<?php echo $row["image"]; ?>" alt="<?php echo $row["name"]; ?>"></td>
-                                <td><?php echo $row["name"]; ?></td>
-                            </tr>
-                            <?php
-                        }
-                        ?>
-                    </tbody>
-                </table>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
                 <?php
-            } else {
-                echo "0 results";
-            } ?>
+                // Query om gegevens op te halen uit de database
+                $sql = "SELECT * FROM camping_place";
+                $result = $conn->query($sql);
+
+                // Controleren of er resultaten zijn
+                if ($result->rowCount() > 0) {
+                    // Beginnen met het maken van de HTML-tabel
+                    ?>
+                    <table class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Kosten P.D</th>
+                                <th>In Gebruik</th>
+                                <th>Schoongemaakt</th>
+                                <th>Beschrijving</th>
+                                <th>Plaatje</th>
+                                <th>Naam</th>
+                                <th>Actie</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                            // Loop door de resultaten en voeg elke rij toe aan de HTML-tabel
+                            while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+                                ?>
+                                <tr>
+                                    <td>
+                                        <?php echo $row["id"]; ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $row["cost_per_day"]; ?>
+                                    </td>
+                                    <td>
+                                        <?php echo ($row["in_use"] == 1) ? "Ja" : "Nee"; ?>
+                                    </td>
+                                    <td>
+                                        <?php echo ($row["cleaned"] == 1) ? "Ja" : "Nee"; ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $row["description"]; ?>
+                                    </td>
+                                    <td style="max-width: 150px;"><img class="img-fluid" src="<?php echo $row["image"]; ?>"
+                                            alt="<?php echo $row["name"]; ?>"></td>
+                                    <td>
+                                        <?php echo $row["name"]; ?>
+                                    </td>
+                                    <td>
+                                        <a href="locaties-edit.php?id=<?php echo $row["id"]; ?>"
+                                            class="btn btn-primary btn-sm">Bewerken</a>
+                                    </td>
+                                </tr>
+                                <?php
+                            }
+                            ?>
+                        </tbody>
+                    </table>
+                    <?php
+                } else {
+                    echo "0 results";
+                }
+                ?>
+            </div>
         </div>
     </div>
-</div>
 </body>
