@@ -36,7 +36,7 @@ if (isset($_POST["submit"])) {
             $row = $stmt->fetch();
             
             if($row['account_role'] == 1) {
-                redirect("../admin/dashboard.php");
+                redirect("../admin/dashboardAdmin.php");
             } else {
                 redirect("../pages/account.php");
             }
@@ -44,12 +44,4 @@ if (isset($_POST["submit"])) {
             redirect("../pages/login.php");
         }        
     }
-}
-
-function printError(): string {
-    global $error;
-    if ($error != null)
-        return $error;
-    else 
-        return "";
 }
