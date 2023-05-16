@@ -17,6 +17,8 @@ session_start();
 <body>
 
     <a href="klachten.php">Klachten</a>
+    <a href="locaties.php">Locaties</a>
+    <a href="email.php">Mailer</a>
     <?php
 
     $user_id = $_SESSION['user_id'];
