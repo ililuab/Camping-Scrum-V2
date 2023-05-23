@@ -1,10 +1,12 @@
 <?php
 include "../includes/connect.php";
 session_start();
-if (!isset($_POST['submit'])) {
+if (isset($_POST['submit'])) {
     header('Location: klachten.php');
     exit();
-}
+} ?>
+
+<?php
 
 // Gegevens uit het formulier ophalen
 $account_id = $_SESSION['user_id'];

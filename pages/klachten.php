@@ -49,7 +49,7 @@ if (isset($_SESSION['complaint_success'])) {
             <option value="3">Beheerder</option>
         </select><br><br>
 
-        <input type="submit" value="Submit Complaint">
+        <input type="submit" value="submit">
     </form>
 </body>
 
