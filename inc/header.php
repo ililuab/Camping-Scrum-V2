@@ -7,7 +7,7 @@
     </div>
     <div class="nav-container">
       <ul>
-        <li><a href="index.php">Home</a></li>
+        <li><a href="/pages/index.php">Home</a></li>
         <li><a href="reserveren.php">Reserveren</a></li>
         <li><a href="contact.php">Contact</a></li>
         <li><a href="over-scrum.php">Over Scrum BV</a></li>
