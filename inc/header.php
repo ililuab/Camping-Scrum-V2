@@ -1,13 +1,13 @@
 <header>
   <div class="container-main"> 
     <div class="logo-container">
-      <a href="/">
+      <a href="/Camping-Scrum-V2/pages/">
         <img class="logo" src="../media/logo.png" alt="logo">
       </a>
     </div>
     <div class="nav-container">
       <ul>
-        <li><a href="/pages/index.php">Home</a></li>
+        <li><a href="/Camping-Scrum-V2/pages/">Home</a></li>
         <li><a href="reserveren.php">Reserveren</a></li>
         <li><a href="contact.php">Contact</a></li>
         <li><a href="over-scrum.php">Over Scrum BV</a></li>
