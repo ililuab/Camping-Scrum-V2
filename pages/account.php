@@ -13,7 +13,7 @@
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Jouw merk</a>
+        <a class="navbar-brand" href="#">Dashboard</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -27,10 +27,10 @@
                     <a class="nav-link" href="locaties.php">Locaties</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="logout.php">Uitloggen</a>
+                    <a class="nav-link" href="email.php">Mailer</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="email.php">Mailer</a>
+                    <a class="nav-link" href="logout.php">Uitloggen</a>
                 </li>
             </ul>
         </div>
