@@ -31,7 +31,7 @@ include("../php/login.php")
             <div class="login" id="logindiv">
                 <form class="form" action="../php/login.php" method="POST">
                     <div class="input-container">
-                        <input required placeholder="E-Mail" name="email" class="" type="text">
+                        <input required placeholder="E-Mail" name="email" class="" type="email">
                     </div>
                     <div class="input-container">
                         <input required placeholder="Password" name="wachtwoord" class="" type="password">
@@ -48,7 +48,7 @@ include("../php/login.php")
                         <input placeholder="Full Name" name="full_name" class="" type="text">
                     </div>
                     <div class="input-container">
-                        <input placeholder="E-Mail" name="email" class="" type="text">
+                        <input placeholder="E-Mail" name="email" class="" type="email">
                     </div>
                     <div class="input-container">
                         <input placeholder="Password" name="wachtwoord" class="" type="password">

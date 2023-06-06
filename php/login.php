@@ -36,7 +36,7 @@ if (isset($_POST["submit"])) {
             $row = $stmt->fetch();
             
             if($row['account_role'] == 1) {
-                redirect("../admin/dashboardAdmin.php");
+                redirect("../php/dashboardAdmin.php");
             } else {
                 redirect("../pages/account.php");
             }

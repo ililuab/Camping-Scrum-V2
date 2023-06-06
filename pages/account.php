@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <title>Document</title>
+    <title>Dashboard User</title>
 </head>
 
 <body>
@@ -22,12 +22,6 @@
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" href="klachten.php">Klachten</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="locaties.php">Locaties</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="email.php">Mailer</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="logout.php">Uitloggen</a>
